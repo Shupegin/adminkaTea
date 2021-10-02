@@ -9,6 +9,12 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <Button
+            android:id="@+id/btn_stop_dialog"
+            android:text="в стоп"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"/>
+
         <EditText
             android:id="@+id/editetext_dialog"
             android:hint="Изменить стоимоcть"

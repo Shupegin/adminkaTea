@@ -11,7 +11,7 @@ import com.newAdmilaTea.newadmilatea.model.MenuModelcatMenu
 import com.newAdmilaTea.newadmilatea.singleton.BasketSingleton
 
 
-class CountDialog {
+class CountDialogStop {
     companion object {
         fun openDialog(context: Context, fileMenu: MenuModelcatMenu) {
 
@@ -21,7 +21,7 @@ class CountDialog {
 
             val dialog = Dialog(context, R.style.CustomDialog)
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-            dialog.setContentView(R.layout.dialog_item_menu)
+            dialog.setContentView(R.layout.dialog_item_stop)
             dialog.window?.setGravity(Gravity.BOTTOM)
             dialog.window?.setLayout(
                 ListPopupWindow.MATCH_PARENT,
@@ -31,12 +31,11 @@ class CountDialog {
             dialog.setCancelable(true)
             dialog.setCanceledOnTouchOutside(true)
             dialog.show()
-            var edite = dialog.findViewById(R.id.editetext_dialog) as EditText
 
-            var btn_stop = dialog.findViewById(R.id.btn_stop_dialog) as Button
-            btn_stop.setOnClickListener {
+            var btn_active = dialog.findViewById(R.id.btn_stop_active_dialog) as Button
+            btn_active.setOnClickListener {
 
-                menuFile.Item?.Stop = 0
+                menuFile.Item?.Stop = 1
                     BasketSingleton.addBasket(menuFile)
                     BasketSingleton.showBasket()
                     BasketSingleton.notifyTwo()
@@ -44,34 +43,7 @@ class CountDialog {
                 dialog.cancel()
             }
 
-
-
-
-
-            var btn_ok = dialog.findViewById(R.id.btn_ok_dialog) as Button
-            btn_ok.setOnClickListener {
-
-                Log.d("GORA","${edite.text.toString()}")
-
-                var text =   edite.text.toString()
-                menuFile.Item?.NewCost = text.toDouble()
-
-                if (!edite.text.toString().equals("")) {
-                    BasketSingleton.addBasket(menuFile)
-                    BasketSingleton.showBasket()
-                    BasketSingleton.notifyTwo()
-                }
-                else {
-                    if (file != null) {
-                        val position: Int = 0
-                        BasketSingleton.delPos(position)
-                        BasketSingleton.notifyTwo()
-                    }
-                }
-                dialog.cancel()
-            }
-
-            var btn_cancel = dialog.findViewById(R.id.btn_cancel_dialog) as Button
+            var btn_cancel = dialog.findViewById(R.id.btn_stop_cancel_dialog) as Button
 
             btn_cancel.setOnClickListener {
                 dialog.cancel()

@@ -106,6 +106,8 @@ class MenuAdapter(context: Context): RecyclerView.Adapter<RecyclerView.ViewHolde
         private var name: TextView = itemView.findViewById(R.id.text_roll)
         private var discription: TextView = itemView.findViewById(R.id.discription_text)
         private var cost: TextView = itemView.findViewById(R.id.txt_roll_price)
+        private var newCost: TextView = itemView.findViewById(R.id.txt_roll_price_new_cost)
+        private var imgLine: ImageView = itemView.findViewById(R.id.img_roll_prise)
         private var checkBoxItem: TextView = itemView.findViewById(R.id.checkBoxItem)
         private var imgDish: ImageView = itemView.findViewById(R.id.image_dish_menu)
         private var wt: TextView = itemView.findViewById(R.id.txt_roll_weight)
@@ -116,6 +118,18 @@ class MenuAdapter(context: Context): RecyclerView.Adapter<RecyclerView.ViewHolde
             name.text = "${menuCategoryModel.Item?.Name}"
             discription.text = "${menuCategoryModel.Item?.Description}"
             cost.text = "${menuCategoryModel.Item?.Cost}" + " р."
+            val newCostt = "${menuCategoryModel.Item?.NewCost}"
+
+            newCost.visibility = View.GONE
+            imgLine.visibility = View.GONE
+
+            //здесь костыль: при пустых значаниях приходят странные цифры, но они не больше 10000)
+            if (newCostt.toDouble() in 1.1..9999.99) {
+                newCost.text = "${newCostt.toString()} р.".toString()
+                newCost.visibility = View.VISIBLE
+                imgLine.visibility = View.VISIBLE
+            }
+
 
             val wtVal = menuCategoryModel.Item?.Wt
             if(wtVal?.toInt() == 0){
@@ -124,6 +138,7 @@ class MenuAdapter(context: Context): RecyclerView.Adapter<RecyclerView.ViewHolde
                 wt.visibility = View.VISIBLE
                 wt.text = "$wtVal гр."
             }
+
             if (menuCategoryModel.Item?.PictureForLoad == null) {
                 val storage = FirebaseStorage.getInstance()
                 val storageRef = storage.getReferenceFromUrl(menuCategoryModel.Item?.Picture!!)

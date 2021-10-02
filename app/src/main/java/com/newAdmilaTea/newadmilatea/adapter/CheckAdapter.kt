@@ -56,12 +56,35 @@ class CheckAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
        var  textlastCost: TextView = itemView.findViewById(R.id.lastCost)
        var  textnewCost: TextView = itemView.findViewById(R.id.newCost)
        var  btnDel: Button = itemView.findViewById(R.id.btn_del_)
+       var  stop: TextView = itemView.findViewById(R.id.stop)
+       var  stopActive: TextView = itemView.findViewById(R.id.stop_active)
+
       fun bind(itemView1: MenuModelcatMenu){
           textname.text = itemView1.Item?.Name
           textlastCost.text = itemView1.Item?.Cost.toString()
-          textnewCost.text = itemView1.Item?.newCost.toString()
+          textnewCost.text = itemView1.Item?.NewCost.toString()
+          val stopVal = itemView1.Item?.Stop?.toInt()!!
 
-
+          when (stopVal) {
+              0 -> {
+                  stop.visibility = View.VISIBLE
+                  stopActive.visibility = View.GONE
+                  textlastCost.visibility = View.GONE
+                  textnewCost.visibility = View.GONE
+              }
+              1 -> {
+                  stop.visibility = View.GONE
+                  stopActive.visibility = View.VISIBLE
+                  textlastCost.visibility = View.GONE
+                  textnewCost.visibility = View.GONE
+              }
+              else -> {
+                  stop.visibility = View.GONE
+                  stopActive.visibility = View.GONE
+                  textlastCost.visibility = View.VISIBLE
+                  textnewCost.visibility = View.VISIBLE
+              }
+          }
 
 
           itemView.setOnClickListener {

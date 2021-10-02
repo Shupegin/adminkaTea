@@ -1,44 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    android:id="@+id/layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="#982343"
+    android:layout_margin="7dp"
     android:layout_height="wrap_content">
 
 
     <LinearLayout
         android:id="@+id/linert"
+        android:background="#982343"
+        android:padding="5dp"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/name1"
-            android:text=""
-
-            android:textSize="25dp"
+            android:text="название"
+            android:textSize="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <TextView
             android:id="@+id/cost1"
-            android:text=""
-            android:layout_marginStart="50dp"
-            android:textSize="25dp"
+            android:text="цена"
+            android:layout_marginStart="5dp"
+            android:textSize="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp" />
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/cost2"
+            android:text="новая цена"
+            android:layout_marginStart="5dp"
+            android:textSize="16dp"
+            android:textColor="@color/colorTangerine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp" />
+
     </LinearLayout>
-
-
-    <TextView
-        android:id="@+id/discption_tex1"
-        android:layout_below="@+id/linert"
-        android:text=""
-        android:gravity="center"
-        android:textSize="25dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-
 
 </RelativeLayout>
