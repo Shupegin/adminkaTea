@@ -5,44 +5,47 @@
     android:layout_height="wrap_content"
     tools:context=".ui.controlCheckFragment.ControlCheckFragment">
 
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/text_control_check"
-            android:text="Контрольная проверка(без возможности изменить)"
-            android:textSize="15dp"
-            android:layout_centerHorizontal="true"
-            android:background="#AF170C"
-            android:textColor="#E4E8E6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/check_control_recycler"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_below="@+id/text_control_check" />
+    <TextView
+        android:id="@+id/text_control_check"
+        android:text="Контрольная проверка(без возможности изменить)"
+        android:textSize="15dp"
+        android:layout_centerHorizontal="true"
+        android:background="#AF170C"
+        android:textColor="#E4E8E6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
-        <TextView
-            android:id="@+id/text_ckeck"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/check_control_recycler"
-            android:layout_centerHorizontal="true"
-            android:background="#ED2819"
-            android:text="При нажатии NEXT объект уходит на сервер"
-            android:textSize="20sp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/check_control_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/text_control_check" />
 
-        <Button
-            android:id="@+id/btn_next"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/text_ckeck"
-            android:layout_centerHorizontal="true"
-            android:backgroundTint="#FFEB3B"
-            android:text="NEXT"
-            android:textColor="#000000" />
+    <TextView
+        android:id="@+id/text_ckeck"
+        android:layout_below="@+id/check_control_recycler"
+        android:text="При нажатии NEXT объект уходит на сервер"
+        android:background="#ED2819"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_ckeck"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#FFEB3B"
+        android:text="NEXT"
+        android:textColor="#000000" />
     </RelativeLayout>
 </ScrollView>

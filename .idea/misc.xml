@@ -3,16 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Alexander/GitHub/Git Nastya/adminkaTea/app/src/main/res/layout/dialog_item_menu.xml" value="0.2" />
-        <entry key="..\:/Alexander/GitHub/Git Nastya/adminkaTea/app/src/main/res/layout/dialog_item_stop.xml" value="0.22" />
-        <entry key="..\:/Alexander/GitHub/Git Nastya/adminkaTea/app/src/main/res/layout/fragment_check.xml" value="0.1" />
-        <entry key="..\:/Alexander/GitHub/Git Nastya/adminkaTea/app/src/main/res/layout/fragment_control_check.xml" value="0.1" />
-        <entry key="..\:/Alexander/GitHub/Git Nastya/adminkaTea/app/src/main/res/layout/fragment_sale.xml" value="0.1" />
-        <entry key="..\:/Alexander/GitHub/Git Nastya/adminkaTea/app/src/main/res/layout/item_check_adapter.xml" value="0.33" />
-        <entry key="..\:/Alexander/GitHub/Git Nastya/adminkaTea/app/src/main/res/layout/item_check_adapter_two.xml" value="0.18" />
-        <entry key="..\:/Alexander/GitHub/Git Nastya/adminkaTea/app/src/main/res/layout/item_menu_recyclerview.xml" value="0.22" />
-        <entry key="..\:/Alexander/GitHub/Git Nastya/adminkaTea/app/src/main/res/layout/item_sale_adapter.xml" value="0.18" />
-        <entry key="..\:/Alexander/GitHub/Git Nastya/adminkaTea/app/src/main/res/layout/item_stop_adapter.xml" value="0.33" />
         <entry key="app/src/main/res/drawable/gradient.xml" value="0.140625" />
         <entry key="app/src/main/res/drawable/ic_check.xml" value="0.140625" />
         <entry key="app/src/main/res/drawable/okrugl.xml" value="0.2212962962962963" />

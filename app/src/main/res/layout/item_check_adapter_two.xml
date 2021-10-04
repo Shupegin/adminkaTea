@@ -9,44 +9,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
-        android:textSize="20dp" />
+        android:textSize="30dp" />
 
     <TextView
         android:id="@+id/lastCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/text_name_item"
-        android:background="#FFEB3B"
+        android:background="#F44336"
         android:text="lastCost"
-        android:textSize="20dp" />
+        android:textSize="30dp" />
 
     <TextView
         android:id="@+id/newCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/lastCost"
-        android:background="@color/colorTangerine"
+        android:background="#FFEB3B"
         android:text="newCost"
-        android:textSize="20dp" />
+        android:textSize="30dp" />
 
-
-    <TextView
-        android:id="@+id/stop_control"
+    <Button
+        android:id="@+id/btn_del_"
+        android:text="удалить"
+        android:backgroundTint="#234234"
+        android:layout_below="@+id/newCost"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/newCost"
-        android:background="#F44336"
-        android:text="в стоп"
-        android:textSize="20dp" />
-
-    <TextView
-        android:id="@+id/stop_active"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/stop_control"
-        android:background="#F44336"
-        android:text="активировать"
-        android:textSize="20dp" />
-
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>
